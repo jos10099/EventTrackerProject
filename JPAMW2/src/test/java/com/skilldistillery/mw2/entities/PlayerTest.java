@@ -44,7 +44,7 @@ class PlayerTest {
 	@Test
 	void test_Player_entity_mapping() {
 		assertNotNull(player);
-		assertEquals("WEEBMILK", player.getUserName());
+		assertEquals("WEEBMILK", player.getUsername());
 	}
 
 }

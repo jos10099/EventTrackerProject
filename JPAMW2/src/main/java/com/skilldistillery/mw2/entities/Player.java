@@ -14,7 +14,7 @@ public class Player {
 	@GeneratedValue( strategy = GenerationType.IDENTITY)
 	private int id;
 	
-	private String userName;
+	private String username;
 	
 	public Player() {
 		
@@ -28,17 +28,17 @@ public class Player {
 		this.id = id;
 	}
 
-	public String getUserName() {
-		return userName;
+	public String getUsername() {
+		return username;
 	}
 
-	public void setUserName(String userName) {
-		this.userName = userName;
+	public void setUsername(String userName) {
+		this.username = userName;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, userName);
+		return Objects.hash(id, username);
 	}
 
 	@Override
@@ -50,12 +50,12 @@ public class Player {
 		if (getClass() != obj.getClass())
 			return false;
 		Player other = (Player) obj;
-		return id == other.id && Objects.equals(userName, other.userName);
+		return id == other.id && Objects.equals(username, other.username);
 	}
 
 	@Override
 	public String toString() {
-		return "Player [id=" + id + ", userName=" + userName + "]";
+		return "Player [id=" + id + ", userName=" + username + "]";
 	}
 	
 	
