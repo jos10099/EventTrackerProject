@@ -2,6 +2,7 @@ package com.skilldistillery.mw2.entities;
 
 import java.util.Objects;
 
+import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
@@ -16,9 +17,75 @@ public class Player {
 	
 	private String username;
 	
+	private String weapon;
+	
+	@Column(name ="favorite_perk")
+	private String favoritePerk;
+	
+	@Column(name = "operator_skin")
+	private String operatorSkin;
+	
+	private String level;
+	
+	
+	
 	public Player() {
 		
 	}
+	
+	
+
+	public String getFavoritePerk() {
+		return favoritePerk;
+	}
+
+
+
+
+	public void setFavoritePerk(String favoritePerk) {
+		this.favoritePerk = favoritePerk;
+	}
+
+
+
+
+	public String getOperatorSkin() {
+		return operatorSkin;
+	}
+
+
+
+
+	public void setOperatorSkin(String operatorSkin) {
+		this.operatorSkin = operatorSkin;
+	}
+
+
+
+
+	public String getLevel() {
+		return level;
+	}
+
+
+
+
+	public void setLevel(String level) {
+		this.level = level;
+	}
+
+
+
+
+	public String getWeapon() {
+		return weapon;
+	}
+
+
+	public void setWeapon(String weapon) {
+		this.weapon = weapon;
+	}
+
 
 	public int getId() {
 		return id;
@@ -38,7 +105,7 @@ public class Player {
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(id, username);
+		return Objects.hash(favoritePerk, id, level, operatorSkin, username, weapon);
 	}
 
 	@Override
@@ -50,12 +117,15 @@ public class Player {
 		if (getClass() != obj.getClass())
 			return false;
 		Player other = (Player) obj;
-		return id == other.id && Objects.equals(username, other.username);
-	}
+		return Objects.equals(favoritePerk, other.favoritePerk) && id == other.id && Objects.equals(level, other.level)
+				&& Objects.equals(operatorSkin, other.operatorSkin) && Objects.equals(username, other.username)
+				&& Objects.equals(weapon, other.weapon);
+	} 
 
 	@Override
 	public String toString() {
-		return "Player [id=" + id + ", userName=" + username + "]";
+		return "Player [id=" + id + ", username=" + username + ", weapon=" + weapon + ", favoritePerk=" + favoritePerk
+				+ ", operatorSkin=" + operatorSkin + ", level=" + level + "]";
 	}
 	
 	

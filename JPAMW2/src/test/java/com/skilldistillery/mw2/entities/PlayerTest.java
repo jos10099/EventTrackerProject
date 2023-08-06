@@ -18,6 +18,7 @@ class PlayerTest {
 	private static EntityManagerFactory emf;
 	private EntityManager em;
 	private Player player;
+	
 
 	@BeforeAll
 	static void setUpBeforeClass() throws Exception {
@@ -45,6 +46,10 @@ class PlayerTest {
 	void test_Player_entity_mapping() {
 		assertNotNull(player);
 		assertEquals("WEEBMILK", player.getUsername());
+		assertEquals("TAQ-56", player.getWeapon());
+		assertEquals("Double Time", player.getFavoritePerk());
+		assertEquals("Starlight", player.getOperatorSkin());
+		assertEquals("292", player.getLevel());
 	}
 
 }

@@ -6,7 +6,7 @@ import com.skilldistillery.mw2.entities.Player;
 public interface PlayerService {
 	List <Player> listAllPlayers();
 	Player getPlayer(int playerId);
-	Player creat(Player newPlayer);
+	Player create(Player newPlayer);
 	Player update(int playerId, Player player);
 	boolean delete(int playerId);
 
