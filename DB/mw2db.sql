@@ -16,11 +16,11 @@ CREATE SCHEMA IF NOT EXISTS `mw2db` DEFAULT CHARACTER SET utf8 ;
 USE `mw2db` ;
 
 -- -----------------------------------------------------
--- Table `player`
+-- Table `Starli`
 -- -----------------------------------------------------
-DROP TABLE IF EXISTS `player` ;
+DROP TABLE IF EXISTS `Starli` ;
 
-CREATE TABLE IF NOT EXISTS `player` (
+CREATE TABLE IF NOT EXISTS `Starli` (
   `id` INT NOT NULL AUTO_INCREMENT,
   `username` VARCHAR(45) NULL,
   `weapon` VARCHAR(45) NULL,
@@ -42,11 +42,11 @@ SET FOREIGN_KEY_CHECKS=@OLD_FOREIGN_KEY_CHECKS;
 SET UNIQUE_CHECKS=@OLD_UNIQUE_CHECKS;
 
 -- -----------------------------------------------------
--- Data for table `player`
+-- Data for table `Starli`
 -- -----------------------------------------------------
 START TRANSACTION;
 USE `mw2db`;
-INSERT INTO `player` (`id`, `username`, `weapon`, `favorite_perk`, `operator_skin`, `level`) VALUES (1, 'WEEBMILK', 'TAQ-56', 'Double Time', 'Starlight', '292');
+INSERT INTO `Starli` (`id`, `username`, `weapon`, `favorite_perk`, `operator_skin`, `level`) VALUES (1, 'WEEBMILK', 'TAQ-56', 'Double Time', 'Starlight', '292');
 
 COMMIT;
 
