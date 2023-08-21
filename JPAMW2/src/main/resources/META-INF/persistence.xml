@@ -9,7 +9,7 @@
 
 
 		<properties>
-			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:3306/mw2db?useSSL=false&amp;useLegacyDatetimeCode=false&amp;serverTimezone=US/Mountain" />
+			<property name="javax.persistence.jdbc.url" value="jdbc:mysql://localhost:8085/mw2db?useSSL=false&amp;useLegacyDatetimeCode=false&amp;serverTimezone=US/Mountain" />
 			<property name="javax.persistence.jdbc.user" value="mw2user" />
 			<property name="javax.persistence.jdbc.password" value="mw2user" />
 			<property name="javax.persistence.jdbc.driver" value="com.mysql.cj.jdbc.Driver" />
